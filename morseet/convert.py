@@ -26,8 +26,8 @@ def text_to_morse(sent: str):
     err = 0
     invalid_input = set()
     for char in sent:
-        if char.lower() in morse_dict or char == " ":
-            if char != " ":
+        if char.lower() in morse_dict or char in [" ", "\n", "\t", "\r"]:
+            if char not in [" ", "\n", "\t", "\r"]:
                 morsed_sent += morse_dict[char.lower()] + " "
             else:
                 morsed_sent += space
@@ -47,9 +47,11 @@ def morse_to_text(morse: str):
     err = 0
     invalid_input = set()
     for part in morse.split():
-        if part in reverse_morse_dict or part in ["/", "......."]:
+        if part in reverse_morse_dict or part in ["/", ".......", "\n", "\t", "\r"]:
             if part in ["/", "......."]:
                 text += " "
+            elif part in ["\n", "\t", "\r"]:
+                text += part
             else:
                 text += reverse_morse_dict[part]
         else:

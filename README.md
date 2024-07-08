@@ -28,6 +28,7 @@ TBD
 - Easily unserstand minor bugged morse codes
 - SOS signal
 - See delayed morse code formation real time
+- Input text files and perform conversions
 - Amazing color scheme customizability
 
 ## Installation

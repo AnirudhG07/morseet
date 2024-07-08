@@ -1,0 +1,38 @@
+.TH Morseet 1 "July 2024" "Morseet Manual" "Morseet Manual Page"
+NAME
+    morseet - morseet is a python command line tool to convert text to morse-code and vice versa.
+SYNOPSIS
+    morseet [OPTION]
+    morseet -v, --version
+
+DESCRIPTION
+    morseet(slang for morse-it) is a command line tool to convert text to morse-code and vice versa. It has various features and customization options making it the only tool
+    you would go to. It has various features like SOS signal and real time delayed printing morse code.
+
+OPTIONS
+    -h, --help
+        To see the help message.
+    -c, --config
+        To open the configuration file in $EDITOR
+
+FILES
+    morseet uses a `config.toml` file to open the configurations for the tool.
+
+NOTES
+    
+    
+EXAMPLES
+    To open morseet.
+
+        $ morseet
+
+    To open configuration file of morseet.
+        
+        $ morseet --config
+
+DEPENDENCIES
+    Morseet requires python version >= 3.11 and ncurses library present in your python version.
+
+AUTHOR
+    morseet was written by Anirudh Gupta.
+    Visit <https://github.com/AnirudhG07/morseet> for more information.

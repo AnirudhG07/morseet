@@ -4,7 +4,6 @@ import subprocess
 
 from entry import entry
 
-
 def main():
     ## Handle input flags
     parser = argparse.ArgumentParser(
@@ -22,18 +21,18 @@ def main():
         "-c", "--config", action="store_true", help="Open the Configuration file in $EDITOR"
     )
 
-    # Parse the arguments
     args = parser.parse_args()
-
+    # Get the directory of the current script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Construct the path to config.toml in the same directory
+    config_path = os.path.join(script_dir, "config.toml")
     # Check if the config flag was used
     if args.config:
         # Get the default editor from the environment variable
         editor = os.getenv("EDITOR", "nano")  # Default to nano if EDITOR is not set
         # Open the config.toml file in the editor
-        subprocess.run([editor, "config.toml"])
+        subprocess.run([editor, config_path])
+
     else:
         # Call the entry function if the -c flag is not used
         exit_code = entry()
-
-if __name__ == "__main__":
-    main()

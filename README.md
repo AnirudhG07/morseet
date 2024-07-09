@@ -1,19 +1,19 @@
-# morseet
+# morseet ![Static Badge](https://img.shields.io/badge/version-1.0.0-pink) 
 
 Morseet is the new and only command line text MORSEEEEEETTT-er! Which means to `morse-it` in my slang, which also sounds like name of a pretty lady. This converts Morse to text, text to morse, Text to text and Morse to Morse. Just kidding!
 But you get the point.
 
 ## Table of Contents
 
-- [morseet](#morseet)
-  - [Previews/Screenshots](#previewsscreenshots)
-  - [Installation](#installation)
-    - [Homebrew](#homebrew)
-    - [Pip Installation](#pip-installation)
-    - [Manual installation](#manual-installation)
-  - [Configurations](#configurations)
-  - [What makes MORSEET different?](#what-makes-morseet-different)
-  - [Dependencies](#dependencies)
+
+- [Previews/Screenshots](#previewsscreenshots)
+- [Installation](#installation)
+  - [Homebrew](#homebrew)
+  - [Pip Installation](#pip-installation)
+  - [Manual installation](#manual-installation)
+- [Configurations](#configurations)
+- [What makes MORSEET different?](#what-makes-morseet-different)
+- [Dependencies](#dependencies)
 - [Poem for Morseet](#poem-for-morseet)
   - [Thank you](#thank-you)
 
@@ -78,7 +78,12 @@ You can have color_schemes as you like for this `MORSEET` command-line tool. Run
 morseet -c # or --config
 ```
 
-## What makes MORSEET different?
+> [!Note]
+>
+> The config.toml file is present in the source package directory, so if you would like to access it's location, you would have to do it through location in the editor.
+
+
+## What makes MORSEET different? ![Static Badge](https://img.shields.io/badge/check-me_out-magenta) 
 
 Unlike other command line tools for converting morse codes, this tool let's you -
 
@@ -99,7 +104,7 @@ pip install toml
 
 This will though automatically downloaded with the installation of the tool.
 
-# Poem for Morseet
+# Poem for Morseet ![Static Badge](https://img.shields.io/badge/for-morseet-blue) ![Static Badge](https://img.shields.io/badge/by-morseet-greeb) ![Static Badge](https://img.shields.io/badge/using-morseet-red) 
 
 ```
 Morseet, Morseet, Morseet

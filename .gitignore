@@ -1,1 +1,4 @@
 morseet/__pycache__
+dist
+morseet.egg-info
+build/lib/morseet

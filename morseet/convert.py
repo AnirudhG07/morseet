@@ -1,11 +1,15 @@
 import toml
 from morse_dict import morse_dict, reverse_morse_dict
+import os
 
 def space_char():
     """
     Opens up config.toml file and reads the space character number
     """
-    with open("config.toml", "r") as f:
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    config_path = os.path.join(dir_path, "config.toml")
+
+    with open(config_path, "r") as f:
         config = toml.load(f)
     # Access the settings
     space = ""

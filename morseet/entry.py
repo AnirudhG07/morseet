@@ -1,6 +1,7 @@
 from convert import morse_to_text, text_to_morse
 import toml 
 import time
+import os
 
 welcome = "Welcome to Morse Code Translator. Input the below options to get started:"
 option1 = "Text to Morse Code:"
@@ -23,6 +24,9 @@ greetings = """
 |_| |_| |_|\\___/|_|  |___/\\___|\\___|\\__|
 """
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+config_path = os.path.join(dir_path, "config.toml")
+
 def format(text:str, code) -> str:
     """
     This function formats the text to be printed
@@ -30,7 +34,7 @@ def format(text:str, code) -> str:
     return f"\033[{code}m{text}\033[0m"
 
 def entry():
-    with open("config.toml", "r") as f:
+    with open(config_path, "r") as f:
         config = toml.load(f)
     # Access the color_schemes
     greet_col = config["color_schemes"]["greeting"]
@@ -83,14 +87,15 @@ def entry():
         return 0
     
     if option == 4:
+        delay_unit = config["settings"]["delay_unit"]
         for char in output:
             print(char, end="", flush=True)
             if char == ".":
-                time.sleep(0.2)
+                time.sleep(delay_unit)
             elif char == "-":
-                time.sleep(0.6)
+                time.sleep(3*delay_unit)
             else: ## Space
-                time.sleep(1.4)
+                time.sleep(7*delay_unit)
         print("\n")
     else:
         print(output)
@@ -110,7 +115,7 @@ def entry():
     return 0
 
 def file_entry(file_content: str) -> int:
-    with open("config.toml", "r") as f:
+    with open(config_path, "r") as f:
         config = toml.load(f)
     # Access the color_schemes
     greet_col = config["color_schemes"]["greeting"]

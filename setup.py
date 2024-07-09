@@ -50,16 +50,10 @@ Visit the Github Repository for more details: https://github.com/AnirudhG07/mors
 1.0.0
 
 # Note:
-1) The tool is developed using Python and ncurses library.
+1) The tool is developed using Python.
 2) This tools is crossplatform for MacOS, Linux, Windows, etc.
 
 """
-
-install_requires = []
-
-if platform.system() == "Windows":
-    install_requires.append("windows-curses")
-install_requires.extend(["setuptools"])
 
 setup(
     name="morseet",
@@ -69,8 +63,11 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/AnirudhG07/morseet",
     author="Anirudh Gupta",
+    package_data={
+        'morseet': ['config.toml'],
+    },
     packages=find_packages(),
-    install_requires=install_requires,
+    install_requires=["toml"],
     keywords=["terminal", "Morse Code converted", "Encryption", "CLI"],
     python_requires=">=3.11",
     entry_points={

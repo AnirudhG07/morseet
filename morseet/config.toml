@@ -1,6 +1,7 @@
 # Select the settings you would like to use
 [settings]
 space_char = 1 # 0 = '/', 1 = '.......', else default 1
+delay_unit = 0.2 # in seconds. default = 0.2
 
 [color_schemes]
 # Red = "34"

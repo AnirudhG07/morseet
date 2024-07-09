@@ -1,9 +1,10 @@
-import argparse
+import sys
 import os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
+import argparse
 import subprocess
-
 from entry import *
-
 
 def main():
     ## Handle input flags
@@ -34,7 +35,6 @@ def main():
         )
 
     args = parser.parse_args()
-    # Get the directory of the current script
     script_dir = os.path.dirname(os.path.abspath(__file__))
     # Construct the path to config.toml in the same directory
     config_path = os.path.join(script_dir, "config.toml")
@@ -45,7 +45,7 @@ def main():
         # Open the config.toml file in the editor
         subprocess.run([editor, config_path])
 
-    if args.read:
+    elif args.read:
         # Read the content of the specified input file
         input_file_path = args.read
         try:
@@ -59,7 +59,5 @@ def main():
     else:
         # Call the entry function if the -c flag is not used
         exit_code = entry()
-
-
 if __name__ == "__main__":
     main()

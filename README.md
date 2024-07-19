@@ -19,7 +19,9 @@ But you get the point.
 
 ## Previews/Screenshots
 
-TBD
+https://github.com/user-attachments/assets/ad7be202-0399-49f6-a11a-f0dc3e45b4ad
+
+Explore more and have fun with it!
 
 ## Features
 

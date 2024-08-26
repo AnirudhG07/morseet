@@ -64,7 +64,7 @@ setup(
     url="https://github.com/AnirudhG07/morseet",
     author="Anirudh Gupta",
     package_data={
-        'morseet': ['config.toml'],
+        "morseet": ["config.toml"],
     },
     packages=find_packages(),
     install_requires=["toml"],
@@ -88,4 +88,3 @@ setup(
         "Operating System :: Microsoft :: Windows",
     ],
 )
-
